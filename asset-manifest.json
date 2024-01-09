@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Food-explore-Website/static/css/main.9b8737e6.css",
-    "main.js": "/Food-explore-Website/static/js/main.c41ac3da.js",
+    "main.js": "/Food-explore-Website/static/js/main.5ae5bbae.js",
     "static/media/welcome.png": "/Food-explore-Website/static/media/welcome.723e52d36732126fa795.png",
     "static/media/ambience.jpg": "/Food-explore-Website/static/media/ambience.8b318e0aa2b30e0a977d.jpg",
     "static/media/logos.png": "/Food-explore-Website/static/media/logos.1316ef50d84b10ee5041.png",
     "static/media/DeliveryImg.png": "/Food-explore-Website/static/media/DeliveryImg.0fbebbdbfc53d67bdd8f.png",
     "index.html": "/Food-explore-Website/index.html",
     "main.9b8737e6.css.map": "/Food-explore-Website/static/css/main.9b8737e6.css.map",
-    "main.c41ac3da.js.map": "/Food-explore-Website/static/js/main.c41ac3da.js.map"
+    "main.5ae5bbae.js.map": "/Food-explore-Website/static/js/main.5ae5bbae.js.map"
   },
   "entrypoints": [
     "static/css/main.9b8737e6.css",
-    "static/js/main.c41ac3da.js"
+    "static/js/main.5ae5bbae.js"
   ]
 }
