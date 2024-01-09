@@ -5,34 +5,11 @@ import {styled , Box, Container }  from '@mui/system'
 import fbIcon from '../../assets/facebook.png'
 import twitterIcon from '../../assets/twitter.png'
 import linkedinIcon from '../../assets/instagram.png'
+import {Link} from "react-router-dom"
 
 const Footer = () => {
+   
 
-  const FooterLinkFeature = [{
-    key:1,
-    display:"Guides"
-  },
-  {
-    key:2,
-    display:"Services"
-  },
-  {
-    key:3,
-    display:"Contact Us"
-  }]
-
-  const FooterLinkOverview = [{
-    key:1,
-    display:"Location"
-  },
-  {
-    key:2,
-    display:"PartnerShips"
-  },
-  {
-    key:3,
-    display:"Terms of use & privacy policies"
-  }]
 
   const Custoncontainer = styled(Container)(({theme})=>({
     display:'flex',
@@ -44,15 +21,7 @@ const Footer = () => {
     },
   }))
 
-  const Footerlink = styled("span")(({theme})=>({
-    fontSize:"18px",
-    color:"#000066",
-    fontWeight:"300",
-    cursor:"pointer",
-    "&:hover":{
-      color:"#6602FF",
-    },
-  }))
+ 
   const IconBox = styled(Box)(({theme})=>({
     display:'flex',
     alignItems:'center',
@@ -63,7 +32,7 @@ const Footer = () => {
   }))
 
   return (
-    <Box sx={{py:10, backgroundColor:'#fff602'}}>
+    <Box sx={{py:10, backgroundColor:'#fff602' }}>
       <Custoncontainer>
         <Box>
           <Typography 
@@ -72,45 +41,7 @@ const Footer = () => {
             color:"black",
             fontWeight:"700",
             mb: 1,
-          }}>
-            Featured
-          </Typography>
-
-          {
-            FooterLinkFeature.map((item,)=>(
-              <Footerlink key={item.key}>
-                {item.display}
-                <br/>
-              </Footerlink>
-            ))
-          }
-        </Box>
-        <Box>
-          <Typography  
-          sx={{
-            fontSize:'20px',
-            color:"black",
-            fontWeight:"700",
-            mb: 1,
-          }}>
-            Overview
-          </Typography>
-          {
-            FooterLinkOverview.map((item,)=>(
-              <Footerlink key={item.key}>
-                {item.display}
-                <br/>
-              </Footerlink>
-            ))
-          }
-        </Box>
-        <Box>
-          <Typography 
-          sx={{
-            fontSize:'20px',
-            color:"black",
-            fontWeight:"700",
-            mb: 1,
+            
           }}>
             Get in Touch
           </Typography>
@@ -124,18 +55,25 @@ const Footer = () => {
             Keep in Touch with our social Media Pages.
           </Typography>
           <IconBox>
+            <Link to="https://www.faceboook.com/">
               <img
                 src={fbIcon}
                 alt="fbicon"
-                style={{cursor:'pointer'}}/>
+                style={{cursor:'pointer'}}
+                />
+              </Link>
+              <Link to="https://www.twitter.com/">
               <img
                 src={twitterIcon}
                 alt="twitterIcon"
                 style={{cursor:'pointer'}}/>
+              </Link>
+              <Link to="https://www.instagram.com/">
               <img
                 src={linkedinIcon}
                 alt="linkedinIcon"
                 style={{cursor:'pointer'}}/>
+                </Link>
           </IconBox>
         </Box>
       </Custoncontainer>

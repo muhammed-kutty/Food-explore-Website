@@ -5,6 +5,8 @@ import{useNavigate} from 'react-router-dom'
 import {AllMenuContext} from '../../components/allmenuContext/AllmenuContext'
 import { useContext , useState , useEffect } from 'react'
 import CustomButton from '../../components/customButton/CustomButton'
+import Popup from '../../components/popup/Popup'
+
 
 const Dishes = () => {
 
@@ -12,6 +14,8 @@ const Dishes = () => {
 
   const allmenu = useContext(AllMenuContext)
   let [trending, settrending] = useState([])
+  let [showPopup, setshowPopup] = useState(false);
+  let [popupItems, setpopupItems] = useState("");
  
   useEffect(()=>{
     let trendingItem = allmenu.filter((item)=>(
@@ -48,14 +52,24 @@ const Dishes = () => {
           key={item.idMeal}
           img={item.strMealThumb}
           price='299'
-          item={item.strCategory}
+          item={item.strMeal}
           likes='300'
           heart='500'
-          share='600'/>
+          share='600'
+          showPopupHandler={showPopupHandler}/>
         )
       }
       return null
 })
+
+function showPopupHandler(dishname) {
+  setpopupItems(dishname);
+  setshowPopup(true);
+}
+
+function closepopupHandler(){
+  setshowPopup(false)
+}
 
 function handleclick() {
   navigate("/dishes")
@@ -64,6 +78,12 @@ function handleclick() {
   return (
     <Box sx={{ mt:5, backgroundColor:'#FSFAFE', py:10}}>
       <Container>
+      {showPopup && (
+        <Popup
+          closepopupHandler={closepopupHandler}
+          popupItems={popupItems}
+        ></Popup>
+      )}
         <PropertyTextBox>
           <Typography sx={{color:'#000339', fontSize:'35px', fontWeight:'bold', ml:'13px'}}>
             Featured Dishes

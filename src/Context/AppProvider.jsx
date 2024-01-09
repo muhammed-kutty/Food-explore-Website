@@ -23,6 +23,7 @@ function AppProvider({children}) {
                         alert('item Alredy added');
                         return state
                     }else{
+                        alert('item added to Your Cart');
                         return {...state , cartItems: [...state.cartItems, action.payload]}
                     }
                    case "delete cart item" :

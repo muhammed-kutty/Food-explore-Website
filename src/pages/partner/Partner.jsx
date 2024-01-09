@@ -38,7 +38,7 @@ const Partner = () => {
     cursor:'pointer',
     border:"5px solid rgba(255,255,255,0.5) ",
     [theme.breakpoints.down("md")]:{
-        display:'none'
+        display:'block',
     }
 
 }))

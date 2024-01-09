@@ -90,10 +90,16 @@ const Header = () => {
     
     {
         key:4,
+        path:'/cart',
+        display:'Cart',
+    },
+    
+    {
+        key:5,
         path:'/about',
         display:'About us',
-    }]
-
+    },
+]
     const NavbarLinksBox = styled(Box)(({theme})=>({
         display:'flex',
         alignItems:'center',
@@ -144,7 +150,8 @@ const Header = () => {
         cursor:'pointer',
         border:"5px solid rgba(255,255,255,0.5) ",
         [theme.breakpoints.down("md")]:{
-            display:'none'
+            display:'block',
+             
         }
     
     }))
@@ -181,10 +188,9 @@ const Header = () => {
                             onClose={toogleDrawer('left' ,false)}
                             >
                             {listItem("Left")}
-                        <CustomLogo onClick={()=>navigate('/')}>Food Explore</CustomLogo>
 
                         </Drawer>
-                        <CustomLogo onClick={()=>navigate('/')}>Food Explore</CustomLogo>
+                        <CustomLogo onClick={()=>navigate('/')} >Food Explore</CustomLogo>
                     </Box>
 
                 <NavbarLinksBox>

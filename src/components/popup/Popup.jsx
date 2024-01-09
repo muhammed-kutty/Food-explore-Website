@@ -71,7 +71,7 @@ const Popup = ({ closepopupHandler, popupItems }) => {
     .filter((item) => {
       return item.strMeal === popupItems;
     })
-    .map((item, index) => {
+    .map((item) => {
       return (
         <Box key={item.idMeal}>
           <Box

@@ -6,13 +6,12 @@ import {AllMenuContext} from '../../components/allmenuContext/AllmenuContext'
 import { useContext , useState , useEffect } from 'react'
 import Pagination from '../../components/pgination/Pagination'
 import Popup from '../../components/popup/Popup'
-import CartPage from '../../components/Cart/CartPage'
-import {StateContext} from '../../Context/AppProvider'
+// import {StateContext} from '../../Context/AppProvider'
 
 const Dishes = () => {
 
   const allmenu = useContext(AllMenuContext)
-  const Cartcontext = useContext(StateContext)
+  // const Cartcontext = useContext(StateContext)
 
 
   const [trending, settrending] = useState([])
@@ -194,9 +193,6 @@ let singledish = singleDish.map((item)=>{
           
         </DishesBox>
         
-          {Cartcontext.cartItems.length !==0 ?
-            <CartPage></CartPage> : ''
-          }
         
         <CategoryBox>
           <Typography variant='h2'
